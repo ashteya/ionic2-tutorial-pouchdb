@@ -1,4 +1,4 @@
-import {Injectable} from 'angular2/core';
+import {Injectable} from '@angular/core';
 
 let PouchDB = require('pouchdb');
 
@@ -49,7 +49,7 @@ export class BirthdayService {
             // Return cached data as a promise
             return Promise.resolve(this._birthdays);
         }
-    };
+    }
 
     private onDatabaseChange = (change) => {
         var index = this.findIndex(this._birthdays, change.id);
@@ -78,4 +78,5 @@ export class BirthdayService {
         }
         return low;
     }
+
 }

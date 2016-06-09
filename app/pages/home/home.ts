@@ -1,10 +1,10 @@
-import {Page, Modal, NavController, Platform} from 'ionic-angular';  
+import {Component, NgZone} from "@angular/core";
+import {Modal, NavController, Platform} from 'ionic-angular';  
 import {BirthdayService} from '../../services/birthday.service';  
 import {DetailsPage} from '../details/details';  
-import {NgZone} from 'angular2/core';
 
-@Page({
-    templateUrl: 'build/pages/home/home.html'
+@Component({
+  templateUrl: 'build/pages/home/home.html'
 })
 export class HomePage {  
     public birthdays = [];
@@ -16,7 +16,7 @@ export class HomePage {
 
     }
 
-    onPageLoaded() {
+    ionViewLoaded() {
         this.platform.ready().then(() => {
             this.birthdayService.initDB();
 

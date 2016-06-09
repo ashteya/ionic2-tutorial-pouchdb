@@ -1,8 +1,9 @@
-import {Modal, Page, NavParams, ViewController} from 'ionic-angular';  
+import {Component} from '@angular/core';
+import {Modal, NavParams, ViewController} from 'ionic-angular';  
 import {BirthdayService} from '../../services/birthday.service';
 
-@Page({
-    templateUrl: 'build/pages/details/details.html'
+@Component({
+  templateUrl: 'build/pages/details/details.html',
 })
 export class DetailsPage {  
     public birthday;
@@ -15,7 +16,7 @@ export class DetailsPage {
         private birthdayService: BirthdayService) {
     }
 
-    onPageLoaded() {
+    ionViewLoaded() {
         this.birthday = this.navParams.get('birthday');
 
         if (!this.birthday) {
