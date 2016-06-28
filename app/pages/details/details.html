@@ -1,22 +1,24 @@
-<ion-navbar *navbar>  
-  <ion-title>{{ action }} Birthday</ion-title>
-  <ion-buttons end *ngIf="!isNew">
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ action }} Birthday</ion-title>
+    <ion-buttons end *ngIf="!isNew">
       <button (click)="delete()">
           <ion-icon name="trash"></ion-icon>
       </button>
-  </ion-buttons>
-</ion-navbar>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 
-<ion-content padding class="details">  
-    <ion-list inset>
-        <ion-item>
-            <ion-label>Name</ion-label>
-            <ion-input type="text" [(ngModel)]="birthday.Name"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label>Birthday</ion-label>
-            <ion-input type="text" [(ngModel)]="isoDate" placeholder="YYYY-MM-DD"></ion-input>
-        </ion-item>
-    </ion-list>
-    <button block (click)="save()">Save</button>
-</ion-content>  
+<ion-content padding class="details">
+  <ion-list inset>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="birthday.Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Birthday</ion-label>
+      <ion-datetime displayFormat="MMMM D, YYYY" pickerFormat="MMMM D YYYY" [(ngModel)]="isoDate"></ion-datetime>
+    </ion-item>
+  </ion-list>
+  <button block (click)="save()">Save</button>
+</ion-content>

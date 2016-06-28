@@ -1,4 +1,4 @@
-import {Component, NgZone} from "@angular/core";
+import {Component, NgZone} from "@angular/core";  
 import {Modal, NavController, Platform} from 'ionic-angular';  
 import {BirthdayService} from '../../services/birthday.service';  
 import {DetailsPage} from '../details/details';  

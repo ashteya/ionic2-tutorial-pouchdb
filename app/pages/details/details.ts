@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component} from '@angular/core';  
 import {Modal, NavParams, ViewController} from 'ionic-angular';  
 import {BirthdayService} from '../../services/birthday.service';
 

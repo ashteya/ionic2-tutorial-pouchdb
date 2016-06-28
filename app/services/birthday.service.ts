@@ -15,6 +15,7 @@ export class BirthdayService {
         return this._db.post(birthday);
     }
 
+
     update(birthday) {
         return this._db.put(birthday);
     }
@@ -22,6 +23,7 @@ export class BirthdayService {
     delete(birthday) {
         return this._db.remove(birthday);
     }
+
 
     getAll() {
 
