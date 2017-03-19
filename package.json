@@ -21,7 +21,8 @@
     "ionic-angular": "2.0.0-rc.4",
     "ionic-native": "2.2.11",
     "ionicons": "3.0.0",
-    "pouchdb": "^6.1.0",
+    "pouchdb": "^6.1.2",
+    "pouchdb-adapter-cordova-sqlite": "^2.0.2",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "0.6.26"
   },

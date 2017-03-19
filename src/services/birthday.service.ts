@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as PouchDB from 'pouchdb';
+import cordovaSqlitePlugin from 'pouchdb-adapter-cordova-sqlite';
 
 @Injectable()
 export class BirthdayService {  
@@ -7,7 +8,8 @@ export class BirthdayService {
     private _birthdays;
 
     initDB() {
-        this._db = new PouchDB('birthday2', { adapter: 'websql' });
+        PouchDB.plugin(cordovaSqlitePlugin);
+        this._db = new PouchDB('birthdays.db', { adapter: 'cordova-sqlite' });
     }
 
     add(birthday) {  
