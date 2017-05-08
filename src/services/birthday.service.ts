@@ -9,7 +9,7 @@ export class BirthdayService {
 
     initDB() {
         PouchDB.plugin(cordovaSqlitePlugin);
-        this._db = new PouchDB('birthdays.db', { adapter: 'cordova-sqlite' });
+        this._db = new PouchDB('birthdays.db', { adapter: 'cordova-sqlite', location: 'default' });
     }
 
     add(birthday) {  
